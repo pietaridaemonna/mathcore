@@ -88,6 +88,30 @@ Among the integers, the ideals correspond one-for-one with the non-negative inte
 
 
 
+In 1939, the French group with the pseudonym Nicolas Bourbaki saw structures as the root of mathematics. They first mentioned them in their "Fascicule" of Theory of Sets and expanded it into Chapter IV of the 1957 edition.[1] They identified three mother structures: algebraic, topological, and order.[1][2]
+
+The set of real numbers has several standard structures:
+
+an order: each number is either less or more than any other number.
+algebraic structure: there are operations of multiplication and addition that make it into a field.
+a measure: intervals along the real line have a specific length, which can be extended to the Lebesgue measure on many of its subsets.
+a metric: there is a notion of distance between points.
+a geometry: it is equipped with a metric and is flat.
+a topology: there is a notion of open sets.
+There are interfaces among these:
+
+Its order and, independently, its metric structure induce its topology.
+Its order and algebraic structure make it into an ordered field.
+Its algebraic structure and topology make it into a Lie group, a type of topological group.
+
+
+
+
+
+
+
+
+
 1. Causality: the probability of a measurement outcome
 at a certain time does not depend on the
 choice of measurements that will be performed
