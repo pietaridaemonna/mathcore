@@ -98,6 +98,7 @@ a measure: intervals along the real line have a specific length, which can be ex
 a metric: there is a notion of distance between points.
 a geometry: it is equipped with a metric and is flat.
 a topology: there is a notion of open sets.
+
 There are interfaces among these:
 
 Its order and, independently, its metric structure induce its topology.
