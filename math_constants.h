@@ -39,4 +39,29 @@ const double feigenbaum_alpha   = 2.50290787509589282228390287321;
 3.3.2	In differential equations
 */
 
+
+/*
+TENSORS
+*/
+int matrix_trace() {} /* The trace of a matrix is the sum of the diagonal elements */
+int dot() {} /* gives products of vectors, matrices, and tensors */
+/* The result of applying Dot to two tensors  and  is the tensor .
+ Applying Dot to a rank  tensor and a rank  tensor gives a rank  tensor. */
+
+int levi_civita_tensor = 0; /* gives the d-dimensional Levi-Civita totally
+antisymmetric tensor. gives a rank-d tensor with length d in each dimension. */
+int hodge_dual = 0; /* gives the Hodge dual of the tensor */
+
+/*
+Tensors of rank 2 or higher that arise in applications usually have symmetries
+under exchange of their slots. For example, the inertia tensor,
+the stress-energy tensor, or the Ricci curvature tensor are
+rank-2 fully symmetric tensors; the electromagnetic tensor is a rank-2 antisymmetric
+tensor; and the Riemann curvature tensor and the stiffness tensor
+are rank-4 tensors with nontrival symmetries. 
+*/
+
 #endif
+
+
+
