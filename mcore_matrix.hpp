@@ -1,22 +1,36 @@
 #ifndef MCORE_MATRIX_H
 #define MCORE_MATRIX_H
 
+#include <stdlib.h>
+#include <math.h>
+
 enum indices {
     int indi;
     string descr;
-}
+};
+
+//TODO: check
+//All matrices are not tensors, although all tensors of rank 2 are matrices.!!!
+//Tensor must follow the conversion(transformation) rules, but matrices generally are not.
 
 class Tensor {
 public:
     Tensor();
+    int upper_indices[22];
+    int lower_indices[22];
 
-    int order;
+    int order; // TODO: Rank?
     indices upper;
     indices lower;
     
     int num_of_elements() {return pow(3, order);}
     void inverse() {}
     void transpose() {}
+    void eigenvalues() {} //TODO:
+
+    bool is_toeplitz() {} // matrices whose entries are constant along each diagonal
+    bool is_persymmetric() {} // symmetric about its northeast-southwest diagonal
+    bool is_positive_definite() {} //TODO:
 };
 
 
@@ -82,3 +96,22 @@ struct VectorSpace {
 };
 
 #endif
+
+
+
+// Some famous tensors[edit]
+// The metric tensor, or just the metric, 2nd rank covariant symmetric, is very commonly used to define the "inner product" or "dot product" of two vectors. Being a symmetric bilinear function of two vectors, it is just the right thing for defining a dot product.
+
+// The Levi-Civita tensor, Nth rank covariant, completely antisymmetric (N is the dimension of the space), measures the area/volume/hypervolume of the rectangle/parallelogram/parallelopiped/parallelotope spanned by N vectors. It has the unusual property of having its sign depend on the "handedness" of the space. As such, it is a pseudo-tensor.
+
+// Faraday's tensor, 2nd rank contravariant antisymmetric, is the tensor that explains electrodynamics and Maxwell's Equations in 4-dimensional relativistic spacetime. Its components are the components of the classical electric and magnetic fields.
+
+// The stress tensor, 2nd rank covariant symmetric, is the tensor in 3 dimensions that describes the mechanical stresses on an object.
+
+// The Maxwell stress tensor, 2nd rank contravariant symmetric, is the tensor in 3 dimensions that describes the classical stress of the electric and magnetic fields. The Electromagnetic stress-energy tensor generalizes this to 4 dimensions in relativity and describes the energy and momentum densities of the electromagnetic field.
+
+// Riemann's tensor, 4th rank mixed, is made from the derivatives (gradients) of the metric tensor in different parts of space (that is, a tensor field), and describes the curvature of the space.
+
+// The stress-energy-momentum tensor 2nd rank covariant symmetric, is the tensor in 4-dimensional relativistic spacetime that describes all the stresses, forces, momenta, matter, and energy.
+
+// Ricci's tensor and Einstein's tensor, 2nd rank covariant symmetric, are simplified versions of Riemann's tensor, describe the curvature of spacetime, and make General relativity work. The principle of gravitation in General relativity simply says that Einstein's tensor is 8πK times the stress-energy-momentum tensor, where K is Newton's constant of gravitation.
