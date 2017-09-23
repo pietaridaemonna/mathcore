@@ -1,7 +1,12 @@
-#ifndef __MATH_CONSTANTS_H__
-#define __MATH_CONSTANTS_H__
+//
+// Created by peterducai on 9/17/17.
+//
 
-#include <stdint.h>
+#ifndef _MATH_CONSTANTS_H
+#define _MATH_CONSTANTS_H
+
+#include <stdlib.h>
+
 
 const double pi                 = 3.14159265358979323846264338328;
 const double euler              = 0.57721566490153286060651209008;
@@ -16,6 +21,9 @@ const double square_root_5      = 2.23606797749978969640917366873;
 const double plastic_number     = 1.32471795724474602596090885447;
 const double feigenbaum_delta   = 4.66920160910299067185320382157;
 const double feigenbaum_alpha   = 2.50290787509589282228390287321;
+
+
+#endif // _MATH_CONSTANTS_H
 
 /*
 1	Common mathematical constants
@@ -38,30 +46,3 @@ const double feigenbaum_alpha   = 2.50290787509589282228390287321;
 3.3.1	In integrals
 3.3.2	In differential equations
 */
-
-
-/*
-TENSORS
-*/
-int matrix_trace() {} /* The trace of a matrix is the sum of the diagonal elements */
-int dot() {} /* gives products of vectors, matrices, and tensors */
-/* The result of applying Dot to two tensors  and  is the tensor .
- Applying Dot to a rank  tensor and a rank  tensor gives a rank  tensor. */
-
-int levi_civita_tensor = 0; /* gives the d-dimensional Levi-Civita totally
-antisymmetric tensor. gives a rank-d tensor with length d in each dimension. */
-int hodge_dual = 0; /* gives the Hodge dual of the tensor */
-
-/*
-Tensors of rank 2 or higher that arise in applications usually have symmetries
-under exchange of their slots. For example, the inertia tensor,
-the stress-energy tensor, or the Ricci curvature tensor are
-rank-2 fully symmetric tensors; the electromagnetic tensor is a rank-2 antisymmetric
-tensor; and the Riemann curvature tensor and the stiffness tensor
-are rank-4 tensors with nontrival symmetries. 
-*/
-
-#endif
-
-
-
